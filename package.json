@@ -1,0 +1,67 @@
+{
+  "name": "folder-system",
+  "main": "app/main.js",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Jiawei Tan",
+  "license": "",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "async": "^3.2.0",
+    "axios": "^0.19.2",
+    "electron": "^9.0.5",
+    "evergreen-ui": "^4.27.4",
+    "osenv": "^0.1.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1"
+  },
+  "keywords": [
+    "rest",
+    "hateoas",
+    "spring",
+    "data",
+    "react"
+  ],
+  "scripts": {
+    "start": "electron .",
+    "start react": "react-scripts start",
+    "build": "webpack --mode production --config ./webpack.prod.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "watch": "webpack --watch -d --output ./app/bundle.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
