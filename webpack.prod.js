@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './frontend/src/app.js',
+    entry: './main/src/app.js',
     cache: true,
     mode: 'production',
     output: {
