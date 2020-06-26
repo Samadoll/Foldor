@@ -4,29 +4,70 @@ body {
     font-family: "Helvetica", "Arial", "sans", serif;
 }
 
-#toolBar {
-    top: 0px;
+.toolBar {
+    top: 0;
     position: fixed;
-    background: red;
-    width: 100%;
+    background: lightblue;
+    width: 50%;
     padding: 1em;
     z-index: 2;
 }
 
-#current-folder {
+.right-toolBar {
+    left: calc(50% - 1px);
+    border-left: 1px solid black;
+}
+
+.toolBar-button {
+    float: left;
+    background: steelblue;
+    color: white;
+    margin: 16px 5px;
+    padding: 7px 16px;
+    border-radius: 0.2em;
+    border: 1px solid transparent;
+}
+
+.disabled {
+    background: darkgrey !important;
+    color: black !important;
+}
+
+.current-folder {
+    display: inline-block;
     float: left;
     color: white;
     background: rgba(0, 0, 0, 0.2);
-    padding: 0.5em 1em;
+    padding: 8px 16px;
     min-width: 10em;
     border-radius: 0.2em;
-    margin: 1em;
+    margin: 16px 16px 16px 5px;
 }
 
-#main-area {
+.main-area {
+    overflow: scroll;
     clear: both;
-    margin: 5em 2em 2em;
+    position: absolute;
+    width: 50%;
     z-index: 1;
+    height: calc(100% - 7em);
+}
+
+.left-area {
+    border-right: 1px solid black;
+    clear: both;
+    margin-top: 5em;
+    padding-bottom: 2em;
+    width: 50%;
+}
+
+.right-area {
+    border-left: 1px solid black;
+    clear: both;
+    margin-top: 5em;
+    padding-bottom: 2em;
+    left: 50%;
+    width: 50%;
 }
 
 .item {
@@ -34,12 +75,14 @@ body {
     float: left;
     padding: 1em;
     margin: 1em;
-    width: 6em;
-    height: 6em;
+    width: 5em;
+    height: 5em;
     text-align: center;
 }
 
 .item .filename {
     padding-top: 1em;
     font-size: 10pt;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

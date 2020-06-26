@@ -5,7 +5,7 @@ import fs from "fs";
 export function loadFilesByPath(url, callback) {
     getFilesInFolder(url, (err, files) => {
         if (err) {
-            return alert("Cannot Load Files");
+            return callback("Cannot Load Files", null);
         }
         describeFiles(url, files, callback);
     });
