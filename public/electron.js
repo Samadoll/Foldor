@@ -14,7 +14,7 @@ function createWindow() {
         }
     });
     mainWindow.loadURL(`file://${path.join(__dirname, "../build/index.html")}`);
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
     mainWindow.on("closed", function () {
         mainWindow = null
     })
