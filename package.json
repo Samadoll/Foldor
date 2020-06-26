@@ -1,9 +1,9 @@
 {
-  "name": "folder-system",
-  "main": "app/main.js",
+  "name": "foldor",
+  "main": "src/app/electron.js",
   "version": "1.0.0",
   "private": true,
-  "description": "",
+  "description": "Foldor",
   "repository": {
     "type": "git",
     "url": ""
@@ -17,7 +17,6 @@
     "async": "^3.2.0",
     "axios": "^0.19.2",
     "child_process": "^1.0.2",
-    "electron": "^9.0.5",
     "evergreen-ui": "^4.27.4",
     "osenv": "^0.1.5",
     "react": "^16.13.1",
@@ -39,7 +38,19 @@
     "build": "webpack --mode production --config ./webpack.prod.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "watch": "webpack --watch -d --output ./app/bundle.js"
+    "watch": "webpack --watch -d --output src/app/bundle.js",
+    "pack": "electron-builder",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "folder",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories":{
+      "buildResources": "assets"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -57,12 +68,14 @@
     ]
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.10.1",
     "@babel/core": "^7.1.0",
+    "@babel/polyfill": "^7.10.1",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.2",
+    "electron-builder": "^22.7.0",
     "webpack": "^4.19.1",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "electron": "^9.0.5"
   }
 }

@@ -1,4 +1,5 @@
 node_modules
 .idea
 package-lock.json
-app/bundle.js
+src/app/bundle.js
+dist

@@ -1,13 +1,13 @@
 var path = require('path');
 
 module.exports = {
-    entry: './main/src/app.js',
+    entry: './src/app.js',
     devtool: 'source-map',
     cache: true,
     mode: 'development',
     output: {
         path: __dirname,
-        filename: './apps/bundle.js'
+        filename: './app/bundle.js'
     },
     module: {
         rules: [
@@ -23,5 +23,5 @@ module.exports = {
             }
         ]
     },
-    target: "node"
+    target: "electron-renderer"
 };

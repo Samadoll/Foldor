@@ -14,7 +14,7 @@ function createWindow() {
             nodeIntegration: true
         }
     });
-    mainWindow.loadURL(`file://${app.getAppPath()}/app/main.html`);
+    mainWindow.loadURL(`file://${app.getAppPath()}/src/app/main.html`);
     mainWindow.webContents.openDevTools();
     mainWindow.on("closed", function () {
         mainWindow = null

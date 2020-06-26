@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import ReactDom from "react-dom";
 import {loadFilesByPath} from "./loadFiles";
 import {Spinner, ArrowUpIcon, toaster} from "evergreen-ui";
 import path from "path";

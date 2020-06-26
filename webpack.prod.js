@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-    entry: './main/src/app.js',
+    entry: './src/app.js',
     cache: true,
     mode: 'production',
     output: {
@@ -22,5 +22,5 @@ module.exports = {
             }
         ]
     },
-    target: "node"
+    target: "electron-renderer"
 };
