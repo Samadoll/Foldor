@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^7.1.2",
     "async": "^3.2.0",
     "axios": "^0.19.2",
+    "child_process": "^1.0.2",
     "electron": "^9.0.5",
     "evergreen-ui": "^4.27.4",
     "osenv": "^0.1.5",
