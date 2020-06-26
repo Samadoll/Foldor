@@ -3,6 +3,8 @@ import {loadFilesByPath} from "./loadFiles";
 import {Spinner, ArrowUpIcon, toaster} from "evergreen-ui";
 import path from "path";
 import osenv from "osenv";
+import directorySVG from "../assets/directory.svg";
+import fileSVG from "../assets/file.svg";
 
 export function MainWindow(props) {
     const [url, setUrl] = useState(getHomePath());
@@ -78,7 +80,7 @@ export function MainWindow(props) {
                             files.sort((a, b) => a.type === b.type ? (a.file > b.file ? 1 : -1) : (a.type > b.type ? 1 : -1))
                                 .map((file, index) => (
                                     <div key={index} className="item" title={file.file}>
-                                        <img src={`images/${file.type}.svg`} className="icon" onDoubleClick={() => handleDoubleClick(file)}/>
+                                        <img src={String(file.type) === "file" ? fileSVG : directorySVG } className="icon" onDoubleClick={() => handleDoubleClick(file)}/>
                                         <div className="filename">{file.file}</div>
                                     </div>
                                 ))

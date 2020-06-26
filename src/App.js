@@ -1,9 +1,9 @@
 import React from "react";
+import {MainWindow} from "./components/mainWindow";
+import "./main.css";
 require("@babel/polyfill");
-import ReactDom from "react-dom";
-import {MainWindow} from "./js/mainWindow";
 
-function App() {
+export default function App() {
     return (
         <div>
             <MainWindow isLeft={true}/>
@@ -11,5 +11,3 @@ function App() {
         </div>
     )
 }
-
-ReactDom.render(<App />, document.getElementById("root"));

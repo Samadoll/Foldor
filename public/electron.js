@@ -1,8 +1,7 @@
 "use strict";
 
-const electron = require("electron");
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const {app, BrowserWindow} = require("electron");
+const path = require("path");
 
 let mainWindow = null;
 
@@ -14,7 +13,7 @@ function createWindow() {
             nodeIntegration: true
         }
     });
-    mainWindow.loadURL(`file://${app.getAppPath()}/src/app/main.html`);
+    mainWindow.loadURL(`file://${path.join(__dirname, "../build/index.html")}`);
     mainWindow.webContents.openDevTools();
     mainWindow.on("closed", function () {
         mainWindow = null
